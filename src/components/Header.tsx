@@ -1,4 +1,4 @@
-import { Search, Bell, ChevronDown } from 'lucide-react';
+import { Search, Bell, ChevronDown, Plus } from 'lucide-react';
 
 export default function Header() {
   return (
@@ -6,7 +6,7 @@ export default function Header() {
       <div className="flex items-center justify-between px-6 py-4">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
-          <p className="text-sm text-gray-500 mt-0.5">Welcome back, John! Here's what's happening today.</p>
+          <p className="text-sm text-gray-500 mt-0.5">Manage your social media presence across all platforms.</p>
         </div>
 
         <div className="flex items-center gap-4">
@@ -15,8 +15,8 @@ export default function Header() {
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
             <input
               type="text"
-              placeholder="Search anything..."
-              className="pl-10 pr-4 py-2 w-64 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+              placeholder="Search posts, accounts..."
+              className="pl-10 pr-4 py-2 w-64 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all"
             />
           </div>
 
@@ -26,10 +26,10 @@ export default function Header() {
             <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full"></span>
           </button>
 
-          {/* Date Range */}
-          <button className="flex items-center gap-2 px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-700 hover:bg-gray-100 transition-colors">
-            <span>Jan 1 - Jan 31, 2026</span>
-            <ChevronDown className="w-4 h-4 text-gray-400" />
+          {/* Quick Schedule */}
+          <button className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-violet-500 to-pink-500 text-white rounded-lg text-sm font-medium hover:from-violet-600 hover:to-pink-600 transition-all shadow-sm">
+            <Plus className="w-4 h-4" />
+            <span>New Post</span>
           </button>
         </div>
       </div>

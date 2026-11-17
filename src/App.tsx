@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
+import PlatformCards from './components/PlatformCards';
 import StatsCards from './components/StatsCards';
-import RevenueChart from './components/RevenueChart';
-import SalesChart from './components/SalesChart';
-import RecentOrders from './components/RecentOrders';
+import EngagementChart from './components/EngagementChart';
+import PlatformComparisonChart from './components/PlatformComparisonChart';
+import ScheduledPosts from './components/ScheduledPosts';
 import ActivityFeed from './components/ActivityFeed';
 
 export default function App() {
@@ -22,19 +23,22 @@ export default function App() {
 
         {/* Dashboard Content */}
         <main className="p-6 space-y-6">
+          {/* Platform Overview Cards */}
+          <PlatformCards />
+
           {/* Stats Cards */}
           <StatsCards />
 
-          {/* Charts Row */}
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-            <RevenueChart />
-            <SalesChart />
-          </div>
+          {/* Engagement Comparison Chart */}
+          <EngagementChart />
 
-          {/* Bottom Row */}
+          {/* Platform Comparison Bar Chart */}
+          <PlatformComparisonChart />
+
+          {/* Bottom Row: Scheduled Posts + Activity Feed */}
           <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
             <div className="xl:col-span-2">
-              <RecentOrders />
+              <ScheduledPosts />
             </div>
             <div>
               <ActivityFeed />
