@@ -1,5 +1,14 @@
 node_modules/
-.next/
 dist/
-build/
-*.log
+dist-server/
+coverage/
+.wrangler/
+.work/
+outputs/
+.env
+.env.*
+!.env.example
+*.owedpath
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
